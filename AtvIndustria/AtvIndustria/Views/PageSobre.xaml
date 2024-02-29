@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AtvIndustria.Views.PageSobre" Title="SOBRE">
+    <ContentPage.Content>
+        <StackLayout Orientation="Horizontal" Margin="10">
+            <Image Source="funcionario2" Margin="5"/>
+            <StackLayout>
+                <Label Text="SOBRE" FontSize="Large" FontAttributes="Bold" VerticalOptions="EndAndExpand"/>
+                <Label Text="Desenvolvedor: Murilo Lopes" FontSize="Medium" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Maringá - 2024" FontSize="Medium" FontAttributes="Bold" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

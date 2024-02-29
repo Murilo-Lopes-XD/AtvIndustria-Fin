@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AtvIndustria.Views.PageListar" Title="LOCALIZAR" BackgroundColor="LightGray">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Entry x:Name="txtNome" Keyboard="Default" Placeholder="Nome do Funcionário" HorizontalOptions="StartAndExpand"/>
+                <Button x:Name="btLocalizar" Text="Localizar" CornerRadius="10" Clicked="btLocalizar_Clicked"/>
+            </StackLayout>
+            <ListView x:Name="ListaFuncionarios" HasUnevenRows="True" SeparatorColor="Black" Margin="15" ItemSelected="ListaFuncionarios_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding Id, StringFormat='Código: {0}'}"/>
+                                <Label Text="{Binding Nome, StringFormat='Nome: {0}'}"/>
+                                <Label Text="{Binding Setor, StringFormat='Setor: {0}'}"/>
+                                <Label Text="{Binding Turno, StringFormat='Turno: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

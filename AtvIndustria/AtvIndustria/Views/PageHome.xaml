@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AtvIndustria.Views.PageHome" Title="HOME">
+    <ContentPage.Content>
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Source="funcionario1" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="5"/>
+            <Image x:Name="imgInserir" Source="inserir" Grid.Row="1" Grid.Column="0">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" x:Name="btnInserir" Tapped="btnInserir_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image x:Name="Localizar" Source="localizar" Grid.Row="1" Grid.Column="1">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" x:Name="btnLocalizar" Tapped="btnLocalizar_Tapped"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Label Text="Cadastrar" Grid.Row="2" Grid.Column="0" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="Localizar" Grid.Row="2" Grid.Column="1" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
